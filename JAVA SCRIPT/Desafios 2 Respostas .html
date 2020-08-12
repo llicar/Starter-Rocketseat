@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Manipulando DOM</title>
+    </head>
+
+    <body>
+        
+        <button id="button" name="button"> Clique Aqui </button>
+        <ul></ul>
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+        
+       
+        
+    </div>
+        <script>
+
+            var body = document.querySelector('body');
+            
+            var button = document.querySelector('#button');
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                    for (var i = 0; i < 6; i++) {
+                        color += letters[Math.floor(Math.random() * 16)];
+                    }
+                return color;
+            }
+                
+
+            button.onclick = function () {
+
+                var quadrado = document.createElement('div');
+                quadrado.style.height = 100;
+                quadrado.style.width = 100;
+                quadrado.style.backgroundColor = '#f00';
+                
+                quadrado.onmouseover = function () {
+                   quadrado.style.backgroundColor = getRandomColor();
+               }
+
+                body.appendChild(quadrado);
+
+            }
+
+            var nomes = ['Lucas','Jean','Paulo']
+            var ulList = document.querySelector('ul')
+            var inputNome = document.querySelector('input')
+
+           function addNome (texto) {
+                var liList = document.createElement('li');
+                var textElement = document.createTextNode(texto);
+    
+                liList.appendChild(textElement);
+                ulList.appendChild(liList);
+            }
+            
+            
+
+            function adicionar() {
+                addNome(inputNome.value)
+            }
+
+            for( nome of nomes) {
+                addNome(nome)
+            }
+
+        
+
+        
+
+           
+               
+           
+                
+
+                
+                
+        
+
+           
+
+           
+            
+            
+
+            
+            
+
+            
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>
+            JAVA SCRIPT
+        </title>
+    </head>
+    <body>
+        <script>
+            // Exercicio 1 ----------------------
+            var endereco = {
+                rua: "Rua dezenove",
+                numero: 758,
+                bairro: "Campo Belo 2",
+                cidade: "Campinas",
+                uf: "sp"
+            }
+
+            function mensagem (endereco){
+                return console.log("O usuario mora em " + endereco.cidade + "/" + endereco.uf + ", na rua" + endereco.rua + "com numero: " + endereco.numero);
+            }
+
+            mensagem(endereco);
+
+            // fim Exercicio 1 ------------------
+
+            // Exercicio 2 ----------------------
+            function pares(x,y){
+
+                var maior = (x<y) ? y : x;
+                var menor = (x>y) ? y : x;
+
+                for( i=menor; i<maior;i++) {
+                    if(i%2==0){
+                        console.log(i)
+                    }
+                }
+
+            }
+            pares(2,37);
+
+            // Fim Exercicio 2 --------------------
+           
+
+            // Exercicio 3 --------------------------------------
+           function skill(skills){
+               return console.log(skills.indexOf('Javascript'))
+           }
+
+           var skills = ["Javascript","ReactJS","React Native"]
+
+           skill(skills);
+           // fim exercicio 3 ---------------------------------------
+
+          
+          // exercicio 4 ---------------------------------------
+           function xp(anos) {
+
+                if (anos <0){
+                    return 'Informe um valor válido'
+                }
+                else{
+
+               if( anos >=0 && anos <=1 ){
+                   return ' Iniciante'
+               }
+               else if ( anos <=3){
+                   return 'Intermediario'
+               }
+               else if ( anos <=6 ){
+                   return 'Avanãdo'
+               }
+               else {
+                   return 'Jedi Master'
+               }
+                }
+                
+               
+               }
+
+               var estudos = xp(7)
+
+               console.log(estudos)
+
+               // fim exercicio 4 ------------------------------------------
+
+              
+               // exercicio 5 ---------------------------------------
+               var usuarios = [
+                   {
+                       nome: "Lucas",
+                       habilidades: ["javascript", "reactjs", "Redux"]
+                   },
+                   {
+                       nome: "Juselino",
+                       habilidades: ["PHP", "python", "NodeJS"]
+                   }
+               ];
+
+               function exibeUsuarios(lista) {
+                   for( var value of lista){
+                       console.log(value.nome + " possui as habilidades: " + value.habilidades.join())
+                   }
+               }
+
+               exibeUsuarios(usuarios);
+
+               // fim exercicio 5 ------------------------------
+
+
+           
+
+           
+        </script>
+    </body>
+</html>
